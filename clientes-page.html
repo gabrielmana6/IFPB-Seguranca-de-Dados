@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/SegurancaDeDados/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="my-5 text-center"> Usuários Cadastrados</h1>
+        <main>
+            <table class="table table-striped table-bordered">
+                <thead class="text-center">
+                    <tr>
+                        <th> # </th>
+                        <th> Matrícula </th>
+                        <th> Nome </th>
+                        <th> Telefone </th>
+                        <th> Endereço </th>
+                        <th> Filhos </th>
+                        <th> Renda Familiar </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr> 
+                    <!-- Dynamic Itens -->
+                    </tr>
+                </tbody>
+            </table>
+            
+        </main>
+        
+        <div class="buttons">
+            <button type="button" class="btn btn-primary">Cadastrar novo Usuário</button>
+            <button type="button" class="btn btn-primary">Atualizar Usuário</button>
+            <button type="button" class="btn btn-primary">Gerar Arquivo CSV para E-mail</button>
+        </div>
+
+        <div id="form-page" class="modal" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-header">
+                  <h2 class="modal-title">Cadastro de Novo Usuário</h2>
+                </div>    
+                <div class="modal-body">
+              <form>
+                <div class="form-group">
+                    <label for="matricula">Matricula</label>
+                    <input type="text" class="form-control" id="matricula" aria-describedby="emailHelp" placeholder="Matricula">
+                  </div>
+                  <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Nome">
+                  </div>
+                  <div class="form-group">
+                      <label for="fone">Telefone</label>
+                      <input type="tel" class="form-control" id="fone" placeholder="Telefone">
+                    </div>
+                    <div class="form-group">
+                      <label for="endereco">Endereço</label>
+                      <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+                    </div>
+                    <div class="form-group">
+                      <label for="filhos(as)">Filhos(as)</label>
+                      <input type="number" class="form-control" id="filhos" placeholder="Filhos(as)">
+                    </div>
+                    <div class="form-group">
+                      <label for="renda-familiar">Renda Familiar</label>
+                      <input type="number" class="form-control" id="renda-familiar" placeholder="Renda Familiar">
+                    </div>
+                  <button type="submit" id="btn-submit" class="btn btn-primary">Adicionar</button>
+                </form>
+                </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="./js/clientesJSON.js" type="module"></script>
+    <script src="./js/clientes-script.js" type="module"></script>
+    <script src="./js/cadastrar-cliente.js" type="module"></script>
+    <script src="./js/gerar-csv.js" type="module"></script>
+</body>
+
+</html>
