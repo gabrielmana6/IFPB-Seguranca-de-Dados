@@ -49,3 +49,46 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+//Abrindo Modal de Atualização
+let btnModalAtt = document.querySelectorAll(".btn")[1];
+let modalAtt = document.querySelectorAll(".modal")[1];
+let spanAtt = document.getElementsByClassName("close")[1];
+
+
+btnModalAtt.onclick = function() {
+  modalAtt.style.display = "block";
+  createDynamicEnrollment();
+}
+
+//Fechando Modal de Atualização
+spanAtt.onclick = function() {
+  modalAtt.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modalAtt) {
+    modalAtt.style.display = "none";
+  }
+}
+
+//Função Matrículas Dinâmicas para Atualização
+function createDynamicEnrollment() {
+  for (const cliente of clientes){
+    const inserirOptions = document.querySelector('#selectMatricula');
+    const matricula = obterMatricula(cliente);
+    inserirOptions.insertAdjacentHTML('beforeend', matricula);
+  }
+  
+}
+
+function obterMatricula(cliente) {
+  /* let str ="";
+  for (const cliente of clientes) {
+    console.log(cliente);
+    str += `<option>${cliente.matricula}</option>`
+      }
+    return str; */
+    return cliente.matricula;
+}
