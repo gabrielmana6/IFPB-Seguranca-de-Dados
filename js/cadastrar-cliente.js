@@ -2,12 +2,12 @@ import clientes from './clientesJSON.js';
 import { createItemCard, acrescentaCliente } from './clientes-script.js';
 
 function getForm() {
-    let matricula = document.getElementById('matricula').value;
-    let nome = document.getElementById('nome').value;
-    let telefone = document.getElementById('fone').value;
-    let endereco = document.getElementById('endereco').value;
-    let filhos = document.getElementById('filhos').value;
-    let rendaFamiliar = document.getElementById('renda-familiar').value;
+    let matricula = document.getElementById('cadastra-matricula').value;
+    let nome = document.getElementById('cadastra-nome').value;
+    let telefone = document.getElementById('cadastra-fone').value;
+    let endereco = document.getElementById('cadastra-endereco').value;
+    let filhos = document.getElementById('cadastra-filhos').value;
+    let rendaFamiliar = document.getElementById('cadastra-renda-familiar').value;
 
     return {
         matricula: matricula,
@@ -41,10 +41,9 @@ function cadastraCliente(matricula, nome, telefone, endereco, filhos, rendaFamil
     }
 
     clientes.push(novoCliente);
-    console.log(clientes);
 }
 
-document.getElementById("btn-submit").addEventListener("click", function(event){
+document.getElementById("btn-cadastrar-cliente").addEventListener("click", function(event){
     event.preventDefault();
     const form = getForm();
 
