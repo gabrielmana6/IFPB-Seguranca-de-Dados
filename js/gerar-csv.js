@@ -26,3 +26,9 @@ export function geraCSV() {
     }
     }
 }
+
+
+document.getElementById("btn-gerar-csv").addEventListener("click", function(event){
+    event.preventDefault();
+    geraCSV();
+});
