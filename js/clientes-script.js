@@ -1,8 +1,8 @@
 import clientes from './clientesJSON.js';
 
-let index = 0;
+  let index = 0;
 
-for (const cliente of clientes) {
+  for (const cliente of clientes) {
     const container = document.querySelector('.table');
 
     const item = createItemCard(cliente);
@@ -11,6 +11,7 @@ for (const cliente of clientes) {
 
     index++;
 }
+
 
 function createItemCard(cliente) {
     return  `
@@ -65,6 +66,7 @@ btnModalAtt.onclick = function() {
 //Fechando Modal de Atualização
 spanAtt.onclick = function() {
   modalAtt.style.display = "none";
+  //Falta Zerar a Função createDynamicEnrollment()
 }
 
 window.onclick = function(event) {
@@ -81,3 +83,5 @@ function createDynamicEnrollment() {
     inserirOptions.insertAdjacentHTML('beforeend', matricula);
   } 
 }
+
+export { createItemCard };

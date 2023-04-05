@@ -1,4 +1,5 @@
 import clientes from './clientesJSON.js';
+import { createItemCard, acrescentaCliente } from './clientes-script.js';
 
 function getForm() {
     let matricula = document.getElementById('matricula').value;
@@ -55,4 +56,5 @@ document.getElementById("btn-submit").addEventListener("click", function(event){
         cadastraCliente(matricula, nome, telefone, endereco, filhos, rendaFamiliar);
         window.alert('Cliente cadastrado com sucesso.');
     }
+
 });
