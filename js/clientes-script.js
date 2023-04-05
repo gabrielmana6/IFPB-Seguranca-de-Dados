@@ -77,18 +77,7 @@ window.onclick = function(event) {
 function createDynamicEnrollment() {
   for (const cliente of clientes){
     const inserirOptions = document.querySelector('#selectMatricula');
-    const matricula = obterMatricula(cliente);
+    const matricula = `<option>${cliente.matricula}</option>`;
     inserirOptions.insertAdjacentHTML('beforeend', matricula);
-  }
-  
-}
-
-function obterMatricula(cliente) {
-  /* let str ="";
-  for (const cliente of clientes) {
-    console.log(cliente);
-    str += `<option>${cliente.matricula}</option>`
-      }
-    return str; */
-    return cliente.matricula;
+  } 
 }
