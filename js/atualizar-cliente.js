@@ -32,7 +32,7 @@ function atualizaCliente(matricula, nome, telefone, endereco, filhos, rendaFamil
     clientes[index] = novoCliente;
 }
 
-document.getElementById("btn-adicionar-cliente").addEventListener("click", function(event){
+document.getElementById("btn-atualizar-cliente").addEventListener("click", function(event){
     event.preventDefault();
     const form = getForm();
 
